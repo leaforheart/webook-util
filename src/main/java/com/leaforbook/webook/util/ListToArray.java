@@ -14,13 +14,14 @@ public class ListToArray {
 	}
 	
 	public static Object[][] twoDimensional(List<List<Object>> list) {
-		int size = list.size();
-		Object[][] arr = new Object[size][];
-		for(int i=0;i<size;i++) {
-			for(int j=0;j<list.get(i).size();j++) {
+		int count = list.size();
+		int size = list.get(0).size();
+		Object[][] arr = new Object[count][size];
+		for(int i=0;i<count;i++) {
+			for(int j=0;j<size;j++) {
 				arr[i][j] = list.get(i).get(j);
 			}
-		}
+		} 
 		return arr;
 	}
 	
